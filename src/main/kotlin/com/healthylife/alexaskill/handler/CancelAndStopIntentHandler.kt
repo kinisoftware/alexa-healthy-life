@@ -4,6 +4,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput
 import com.amazon.ask.dispatcher.request.handler.RequestHandler
 import com.amazon.ask.model.Response
 import com.amazon.ask.request.Predicates.intentName
+import com.healthylife.alexaskill.utils.Speeches
 import java.util.Optional
 
 class CancelAndStopIntentHandler : RequestHandler {
@@ -13,9 +14,8 @@ class CancelAndStopIntentHandler : RequestHandler {
     }
 
     override fun handle(input: HandlerInput): Optional<Response> {
-        val text = "¡Gracias por usar Estrenos de cine!"
         return input.responseBuilder
-                .withSpeech(text)
+                .withSpeech(Speeches.goodbye)
                 .withShouldEndSession(true)
                 .build()
     }
