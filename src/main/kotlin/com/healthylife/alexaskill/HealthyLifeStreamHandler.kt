@@ -6,6 +6,7 @@ import com.healthylife.alexaskill.handler.CancelAndStopIntentHandler
 import com.healthylife.alexaskill.handler.HelpIntentHandler
 import com.healthylife.alexaskill.handler.LaunchRequestHandler
 import com.healthylife.alexaskill.handler.SessionEndedRequestHandler
+import com.healthylife.alexaskill.handler.WorkoutIntentHandler
 import com.healthylife.alexaskill.interceptor.LogRequestInterceptor
 import com.healthylife.alexaskill.interceptor.LogResponseInterceptor
 
@@ -18,6 +19,7 @@ class HealthyLifeStreamHandler : SkillStreamHandler(skill) {
                         LaunchRequestHandler(),
                         HelpIntentHandler(),
                         CancelAndStopIntentHandler(),
+                        WorkoutIntentHandler(),
                         SessionEndedRequestHandler()
                 ).build()
     }

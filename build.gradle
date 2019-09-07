@@ -30,11 +30,8 @@ repositories {
 
 dependencies {
 	compile 'com.amazon.alexa:ask-sdk:2.7.2'
-	implementation 'com.squareup.retrofit2:retrofit:2.1.0'
-	implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+	implementation 'com.google.code.gson:gson:2.8.5'
 	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
 
 test {

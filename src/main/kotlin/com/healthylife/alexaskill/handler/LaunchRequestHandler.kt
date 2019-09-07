@@ -14,8 +14,9 @@ class LaunchRequestHandler : RequestHandler {
     }
 
     override fun handle(input: HandlerInput): Optional<Response> {
-        val repromptText = "Puedes pedirme comenzar por un entrenamiento."
-        val text = "¡Hola! ¿Empezamos un entrenamiento?"
+        val repromptText = "¿Qué tipo de entrenamiento te gustaría hacer?"
+        val text = "¡Hola! Gracias por elegir vida saludable, le vamos a ayudar a mantenerse en forma. " +
+                "Tenemos tres niveles disponibles: básico, intermedio, avanzado. ¿Por cuál te gustaría empezar?"
         return input.responseBuilder
                 .withSpeech(text)
                 .withReprompt(repromptText)
