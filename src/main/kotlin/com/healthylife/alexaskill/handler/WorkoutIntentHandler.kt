@@ -9,6 +9,7 @@ import com.amazon.ask.request.Predicates
 import com.google.gson.Gson
 import com.healthylife.alexaskill.model.WorkoutLevel
 import com.healthylife.alexaskill.model.Workouts
+import com.healthylife.alexaskill.utils.Speeches
 import java.util.Optional
 
 class WorkoutIntentHandler : RequestHandler {
@@ -42,7 +43,21 @@ class WorkoutIntentHandler : RequestHandler {
             WorkoutLevel.ADVANCED -> workouts.advance
         }.joinToString(",")
 
-        val text = "Empezando el entrenamiento de nivel $workoutLevel: $exercises"
+        val text: String = """
+            Empezamos el entrenamiento con ${exercises[0]}. 
+            ${Speeches.startExercice}
+            ${Speeches.exerciceCounter}
+            Ahora seguimos con ${exercises[1]}.
+            ${Speeches.startExercice}
+            ${Speeches.exerciceCounter}
+            El siguiente ejercicio es ${exercises[2]}.
+            ${Speeches.startExercice}
+            ${Speeches.exerciceCounter}
+            Y por último ${exercises[3]}.
+            ${Speeches.startExercice}
+            ${Speeches.lastExerciseCounter}
+        """.trimMargin()
+
         return input.responseBuilder
                 .withSpeech(text)
                 .withShouldEndSession(true)

@@ -9,7 +9,7 @@ class Speeches {
         const val helper = "¿Qué entrenamiento quieres realizar?"
         const val repromptHelper ="Podemos realizar un entrenamiento básico, medio o avanzado."
         const val startExercice = """ 
-             <prosody volume="x-loud">5...4...3..2...1....</prosody>
+             <prosody volume="x-loud">en 5...4...3...2...1....</prosody>
              """
 
         const val exerciceCounter = """ 
