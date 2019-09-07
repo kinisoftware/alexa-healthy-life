@@ -11,9 +11,9 @@ import com.healthylife.alexaskill.model.WorkoutLevel
 import com.healthylife.alexaskill.model.Workouts
 import java.util.Optional
 
-class WorkoutInfoIntentHandler : RequestHandler {
+class InfoIntentHandler : RequestHandler {
     override fun canHandle(input: HandlerInput): Boolean {
-        return input.matches(Predicates.intentName(" WorkoutInfoIntent"))
+        return input.matches(Predicates.intentName(" InfoIntent"))
     }
 
     override fun handle(input: HandlerInput): Optional<Response> {
@@ -44,7 +44,7 @@ class WorkoutInfoIntentHandler : RequestHandler {
             WorkoutLevel.ADVANCED -> workouts.advance
         }.joinToString(",")
 
-        val text = "Empezando el entrenamiento de nivel $workoutLevelName: $exercises"
+        val text = "Los ejercicios del nivel $workoutLevelName son: $exercises"
         return input.responseBuilder
                 .withSpeech(text)
                 .withShouldEndSession(true)
