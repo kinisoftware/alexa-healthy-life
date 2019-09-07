@@ -41,7 +41,7 @@ class WorkoutIntentHandler : RequestHandler {
             WorkoutLevel.BASIC -> workouts.basic
             WorkoutLevel.INTERMEDIATE -> workouts.medium
             WorkoutLevel.ADVANCED -> workouts.advance
-        }.joinToString(",")
+        }
 
         val text: String = """
             Empezamos el entrenamiento con ${exercises[0]}. 
@@ -49,11 +49,11 @@ class WorkoutIntentHandler : RequestHandler {
             ${Speeches.exerciceCounter}
             Ahora seguimos con ${exercises[1]}.
             ${Speeches.startExercice}
-            ${Speeches.exerciceCounter}
+            ${Speeches.exerciceCounter2}
             El siguiente ejercicio es ${exercises[2]}.
             ${Speeches.startExercice}
             ${Speeches.exerciceCounter}
-            Y por último ${exercises[3]}.
+            Y sólo queda ${exercises[3]}. <say-as interpret-as="interjection">vamos</say-as>
             ${Speeches.startExercice}
             ${Speeches.lastExerciseCounter}
         """.trimMargin()
