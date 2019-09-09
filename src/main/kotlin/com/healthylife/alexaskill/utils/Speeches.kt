@@ -7,10 +7,10 @@ class Speeches {
             ¡<prosody volume="x-loud"><say-as interpret-as="interjection">hola</say-as></prosody>!
             <break time="50ms"/> 
             Bienvenido a vida saludable, voy a ayudarte a mantenerte en forma. Tengo 
-            tres niveles disponibles de ejercicio: básico, intermedio, avanzado. ¿Por cuál te gustaría comenzar?
+            tres niveles disponibles de ejercicio: básico, intermedio y avanzado. ¿Por cuál te gustaría comenzar?
             """
         const val repromptWelcome = "Puedes pedirme comenzar por un entrenamiento."
-        const val helper = "¿Qué entrenamiento quieres realizar?"
+        const val helper = "¿Qué entrenamiento quieres realizar? Tengo disponibles los niveles básico, medio y avanzado"
         const val repromptHelper ="Podemos realizar un entrenamiento básico, medio o avanzado."
         const val startExercice = """ 
              <prosody volume="x-loud">en 5...4...3...2...1...</prosody>
@@ -35,6 +35,17 @@ class Speeches {
         const val breakCounter = """
                 <break time="5s"/><prosody volume="x-loud">5...4...3...2...1...</prosody>
                 """
+        const val quantityFew =  """
+                    Entonces te recomiendo un entrenamiento básico.
+                """
+        const val quantityNormal =  """
+                    <say-as interpret-as="interjection">hmm</say-as> Puedes realizar un entrenamiento normal.
+                """
+
+        const val quantityMuch =  """
+                    <say-as interpret-as="interjection">ah</say-as> Entonces te recomiendo un entrenamiento avanzado.
+                """
+
 
         const val goodbye =  """
                     ¡<say-as interpret-as="interjection">gracias</say-as> por usar vida saludable!<say-as interpret-as="interjection">hasta luego</say-as>!
