@@ -6,8 +6,8 @@ class Speeches {
             <audio src="https://alexa-healthy-life.s3-eu-west-1.amazonaws.com/speechAudios/intro.mp3"/>
             ¡<prosody volume="x-loud"><say-as interpret-as="interjection">hola</say-as></prosody>!
             <break time="50ms"/> 
-            Gracias por elegir vida saludable, te voy a ayudar a mantenerse en forma. Tengo 
-            tres niveles disponibles: básico, intermedio, avanzado. ¿Por cuál te gustaría empezar?
+            Bienvenido a vida saludable, voy a ayudarte a mantenerte en forma. Tengo 
+            tres niveles disponibles de ejercicio: básico, intermedio, avanzado. ¿Por cuál te gustaría comenzar?
             """
         const val repromptWelcome = "Puedes pedirme comenzar por un entrenamiento."
         const val helper = "¿Qué entrenamiento quieres realizar?"
