@@ -39,7 +39,7 @@ class Speeches {
                     Entonces te recomiendo un entrenamiento básico.
                 """
         const val quantityNormal =  """
-                    <say-as interpret-as="interjection">hmm</say-as> Puedes realizar un entrenamiento normal.
+                    <say-as interpret-as="interjection">hmm</say-as> Puedes realizar un entrenamiento medio.
                 """
 
         const val quantityMuch =  """

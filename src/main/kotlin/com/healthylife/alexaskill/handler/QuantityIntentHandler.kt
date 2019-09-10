@@ -12,17 +12,22 @@ import com.healthylife.alexaskill.model.WorkoutLevel
 import com.healthylife.alexaskill.model.Workouts
 import com.healthylife.alexaskill.utils.Speeches
 import java.util.Optional
+import com.amazon.ask.dispatcher.request.handler.impl.IntentRequestHandler
+import com.amazon.ask.model.Slot
 
-class QuantityIntentHandler : RequestHandler {
-    override fun canHandle(input: HandlerInput): Boolean {
+
+class QuantityIntentHandler : IntentRequestHandler {
+
+
+    override fun canHandle(input: HandlerInput, intentRequest: IntentRequest): Boolean {
         return input.matches(Predicates.intentName("QuantityIntent"))
     }
 
-    override fun handle(input: HandlerInput): Optional<Response> {
+
+    override fun handle(input: HandlerInput, intentRequest: IntentRequest?): Optional<Response> {
         val request = input.requestEnvelope.request
         val intentRequest = request as IntentRequest
-        val intent = intentRequest.intent
-        val slots = intent.slots
+        val slots = intentRequest.intent.slots
         val quantityLevelSlot = slots["quantityLevel"]!!
 
         val quantityLevel = quantityLevelSlot.resolutions.resolutionsPerAuthority
@@ -40,7 +45,9 @@ class QuantityIntentHandler : RequestHandler {
 
         return input.responseBuilder
                 .withSpeech(text)
-                .withShouldEndSession(true)
+                .withShouldEndSession(false)
                 .build()
     }
+
+
 }
