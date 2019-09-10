@@ -11,7 +11,7 @@ class Speeches {
             """
         const val repromptWelcome = "Puedes pedirme comenzar por un entrenamiento."
         const val helper = "¿Qué entrenamiento quieres realizar? Tengo disponibles los niveles básico, medio y avanzado"
-        const val repromptHelper ="Podemos realizar un entrenamiento básico, medio o avanzado."
+        const val repromptHelper ="Si no sabes qué hacer, deja que te recomiende, ¿Qué cantidad has comido hoy?"
         const val startExercice = """ 
              <prosody volume="x-loud">en 5...4...3...2...1...</prosody>
              """

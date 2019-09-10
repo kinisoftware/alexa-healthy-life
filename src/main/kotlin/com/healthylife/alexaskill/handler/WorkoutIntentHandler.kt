@@ -23,7 +23,7 @@ class WorkoutIntentHandler : RequestHandler {
         val intent = intentRequest.intent
         val slots = intent.slots
         val workoutLevelSlot = slots["workoutLevel"]!!
-        
+
         val workoutLevel = workoutLevelSlot.resolutions.resolutionsPerAuthority
                 .first { it.status.code == StatusCode.ER_SUCCESS_MATCH }.values[0].value.id
 
